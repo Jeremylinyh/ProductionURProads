@@ -1,9 +1,9 @@
-const cacheName = "DefaultCompany-Procedural Footprint-0.1.0";
+const cacheName = "DefaultCompany-Local no traffic-0.1.0";
 const contentToCache = [
-    "Build/ProductionURProads.loader.js",
-    "Build/ProductionURProads.framework.js.unityweb",
-    "Build/ProductionURProads.data.unityweb",
-    "Build/ProductionURProads.wasm.unityweb",
+    "Build/Local.loader.js",
+    "Build/Local.framework.js.unityweb",
+    "Build/Local.data.unityweb",
+    "Build/Local.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
