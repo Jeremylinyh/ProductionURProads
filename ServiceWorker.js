@@ -36,7 +36,7 @@ self.addEventListener('fetch', function (e) {
       cache.put(e.request, response.clone());
       return response;
 
-    const cache = await caches.open(cacheName);
+    //const newcache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
     await cache.addAll(contentToCache);
     })());
