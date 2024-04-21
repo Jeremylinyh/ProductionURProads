@@ -8,7 +8,7 @@ const contentToCache = [
 
 ];
 
-self.addEventListener('install', function (e) {
+/*self.addEventListener('install', function (e) {
     console.log('[Service Worker] Install');
     
     e.waitUntil((async function () {
@@ -16,7 +16,13 @@ self.addEventListener('install', function (e) {
       console.log('[Service Worker] Caching all: app shell and content');
       await cache.addAll(contentToCache);
     })());
-});
+});*/
+// Cache resources as soon as the service worker is executed
+(async function () {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Caching all: app shell and content');
+    await cache.addAll(contentToCache);
+})();
 
 self.addEventListener('fetch', function (e) {
     e.respondWith((async function () {
