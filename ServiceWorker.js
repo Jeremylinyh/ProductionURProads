@@ -38,6 +38,7 @@ self.addEventListener('fetch', function (e) {
 
     if (navigator.onLine) 
     {
+        console.log("We are online so why are we not caching?");
         const cache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
     await cache.addAll(contentToCache);
