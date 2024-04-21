@@ -27,11 +27,8 @@
           .register("ServiceWorker.js")
           .then((registration) => {
             // registration worked
-            if (navigator.onLine) 
-            {
-              console.log("Registration succeeded.");
-              registration.update();
-            }
+            console.log("Registration succeeded.");
+            registration.update();
             
           })
           .catch((error) => {
