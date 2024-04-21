@@ -1,4 +1,5 @@
-const cacheName = "DefaultCompany-Local no traffic-0.1.1";
+const cacheName = "DefaultCompany-Local no traffic-0.1.0";
+caches.delete("DefaultCompany-Local no traffic-0.1.1");
 const contentToCache = [
     "Build/Local.loader.js",
     "Build/Local.framework.js.unityweb",
