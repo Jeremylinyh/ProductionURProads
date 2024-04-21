@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-Local no traffic-0.1.0";
+const cacheName = "DefaultCompany-Local no traffic-0.1.2";
 //caches.delete("DefaultCompany-Local no traffic-0.1.1");
 const contentToCache = [
     "Build/Local.loader.js",
