@@ -36,12 +36,8 @@ self.addEventListener('fetch', function (e) {
       cache.put(e.request, response.clone());
       return response;
 
-    if (navigator.onLine) 
-    {
-        console.log("We are online so why are we not caching?");
-        const cache = await caches.open(cacheName);
+    const cache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
     await cache.addAll(contentToCache);
-    }
     })());
 });
