@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-Local no traffic-0.1.3";
+const cacheName = "DefaultCompany-Local no traffic-0.1.6";
 //caches.delete("DefaultCompany-Local no traffic-0.1.1");
 const contentToCache = [
     "Build/Local.loader.js",
@@ -9,7 +9,8 @@ const contentToCache = [
 
 ];
 
-/*self.addEventListener('install', function (e) {
+self.addEventListener('install', function (e) {
+    self.skipWaiting();
     console.log('[Service Worker] Install');
     
     e.waitUntil((async function () {
@@ -17,13 +18,13 @@ const contentToCache = [
       console.log('[Service Worker] Caching all: app shell and content');
       await cache.addAll(contentToCache);
     })());
-});*/
-// Cache resources as soon as the service worker is executed
+});
+/*// Cache resources as soon as the service worker is executed
 (async function () {
     const cache = await caches.open(cacheName);
     console.log('[Service Worker] Caching all: app shell and content');
     await cache.addAll(contentToCache);
-})();
+})();*/
 
 self.addEventListener('fetch', function (e) {
     e.respondWith((async function () {
