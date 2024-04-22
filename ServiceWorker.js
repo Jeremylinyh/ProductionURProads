@@ -10,6 +10,7 @@ const contentToCache = [
 ];
 
 self.addEventListener('install', function (e) {
+    self.skipWaiting();
     console.log('[Service Worker] Install');
     
     e.waitUntil((async function () {
