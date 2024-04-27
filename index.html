@@ -22,19 +22,7 @@
     <script>
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
-          //navigator.serviceWorker.register("ServiceWorker.js");
-          navigator.serviceWorker
-          .register("ServiceWorker.js")
-          .then((registration) => {
-            // registration worked
-            console.log("Registration succeeded.");
-            registration.update();
-            
-          })
-          .catch((error) => {
-            // registration failed
-            console.error(`Registration failed with ${error}`);
-          });
+          navigator.serviceWorker.register("ServiceWorker.js");
         }
       });
 
